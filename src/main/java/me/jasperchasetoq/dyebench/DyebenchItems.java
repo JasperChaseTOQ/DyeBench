@@ -26,22 +26,22 @@ public class DyebenchItems {
     //machines
     public static final SlimefunItemStack DB_DYEBENCH = new SlimefunItemStack("DB_DYEBENCH", Material.PISTON, "&eBasic DB Compressor", "&fCompresses blocks", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.speed(1), LoreBuilder.powerPerSecond(50));
     //Pigments
-    public static final SlimefunItemStack DB_COBBLESTONE_1 = new SlimefunItemStack("DB_COBBLESTONE_1", Material.COBBLESTONE, "&dCompressed Cobblestone", "", "&f8 Cobblestone", "");
-    public static final SlimefunItemStack DB_COBBLESTONE_2 = new SlimefunItemStack("DB_COBBLESTONE_2", Material.COBBLESTONE, "&dDouble Compressed Cobblestone", "", "&f64 Cobblestone", "");
-    public static final SlimefunItemStack DB_COBBLESTONE_3 = new SlimefunItemStack("DB_COBBLESTONE_3", Material.COBBLESTONE, "&dTriple Compressed Cobblestone", "", "&f512 Cobblestone", "");
-    public static final SlimefunItemStack DB_COBBLESTONE_4 = new SlimefunItemStack("DB_COBBLESTONE_4", Material.COBBLESTONE, "&dQuadruple Compressed Cobblestone", "", "&f4096 Cobblestone", "");
-    public static final SlimefunItemStack DB_COBBLESTONE_5 = new SlimefunItemStack("DB_COBBLESTONE_5", Material.COBBLESTONE, "&dQuintuple Compressed Cobblestone", "", "&f32768 Cobblestone", "");
-    public static final SlimefunItemStack DB_COBBLESTONE_6 = new SlimefunItemStack("DB_COBBLESTONE_6", Material.COBBLESTONE, "&dSextuple Compressed Cobblestone", "", "&f262144 Cobblestone", "");
-    public static final SlimefunItemStack DB_STONE_1 = new SlimefunItemStack("DB_STONE_1", Material.STONE, "&dCompressed Stone", "", "&f8 Stone", "");
-    public static final SlimefunItemStack DB_ANDESITE_1 = new SlimefunItemStack("DB_ANDESITE_1", Material.ANDESITE, "&dCompressed Andesite", "", "&f8 Andesite", "");
-    public static final SlimefunItemStack DB_DIORITE_1 = new SlimefunItemStack("DB_DIORITE_1", Material.DIORITE, "&dCompressed Diorite", "", "&f8 Diorite", "");
-    public static final SlimefunItemStack DB_GRANITE_1 = new SlimefunItemStack("DB_GRANITE_1", Material.GRANITE, "&dCompressed Granite", "", "&f8 Granite", "");
-    public static final SlimefunItemStack DB_COBBLED_DEEPSLATE_1 = new SlimefunItemStack("DB_COBBLED_DEEPSLATE_1", Material.COBBLED_DEEPSLATE, "&dCompressed Cobbled Deepslate", "", "&f8 Cobbled Deepslate", "");
-    public static final SlimefunItemStack DB_DEEPSLATE_1 = new SlimefunItemStack("DB_DEEPSLATE_1", Material.DEEPSLATE, "&dCompressed Deepslate", "", "&f8 Deepslate", "");
-    public static final SlimefunItemStack DB_FLINT_1 = new SlimefunItemStack("DB_FLINT_1", Material.FLINT, "&dCompressed Flint", "", "&f8 Flint", "");
-    public static final SlimefunItemStack DB_GRAVEL_1 = new SlimefunItemStack("DB_GRAVEL_1", Material.GRAVEL, "&dCompressed Gravel", "", "&f8 Gravel", "");
-    public static final SlimefunItemStack DB_DIRT_1 = new SlimefunItemStack("DB_DIRT_1", Material.DIRT, "&dCompressed Dirt", "", "&f8 Dirt", "");
-    public static final SlimefunItemStack DB_CLAY_1 = new SlimefunItemStack("DB_CLAY_1", Material.CLAY, "&dCompressed Clay", "", "&f8 Clay", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_1 = new SlimefunItemStack("DB_WHITE_PIGMENT", Material.WHITE_DYE, "&dCompressed Cobblestone", "", "&f8 Cobblestone", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_2 = new SlimefunItemStack("DB_COBBLESTONE_2", Material.ORANGE_DYE, "&dDouble Compressed Cobblestone", "", "&f64 Cobblestone", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_3 = new SlimefunItemStack("DB_COBBLESTONE_3", Material.MAGENTA_DYE, "&dTriple Compressed Cobblestone", "", "&f512 Cobblestone", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_4 = new SlimefunItemStack("DB_COBBLESTONE_4", Material.LIGHT_BLUE_DYE, "&dQuadruple Compressed Cobblestone", "", "&f4096 Cobblestone", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_5 = new SlimefunItemStack("DB_COBBLESTONE_5", Material.YELLOW_DYE, "&dQuintuple Compressed Cobblestone", "", "&f32768 Cobblestone", "");
+    public static final SlimefunItemStack DB_COBBLESTONE_6 = new SlimefunItemStack("DB_COBBLESTONE_6", Material.LIME_DYE, "&dSextuple Compressed Cobblestone", "", "&f262144 Cobblestone", "");
+    public static final SlimefunItemStack DB_STONE_1 = new SlimefunItemStack("DB_STONE_1", Material.PINK_DYE, "&dCompressed Stone", "", "&f8 Stone", "");
+    public static final SlimefunItemStack DB_ANDESITE_1 = new SlimefunItemStack("DB_ANDESITE_1", Material.GRAY_DYE, "&dCompressed Andesite", "", "&f8 Andesite", "");
+    public static final SlimefunItemStack DB_DIORITE_1 = new SlimefunItemStack("DB_DIORITE_1", Material.LIGHT_GRAY_DYE, "&dCompressed Diorite", "", "&f8 Diorite", "");
+    public static final SlimefunItemStack DB_GRANITE_1 = new SlimefunItemStack("DB_GRANITE_1", Material.CYAN_DYE, "&dCompressed Granite", "", "&f8 Granite", "");
+    public static final SlimefunItemStack DB_COBBLED_DEEPSLATE_1 = new SlimefunItemStack("DB_COBBLED_DEEPSLATE_1", Material.PURPLE_DYE, "&dCompressed Cobbled Deepslate", "", "&f8 Cobbled Deepslate", "");
+    public static final SlimefunItemStack DB_DEEPSLATE_1 = new SlimefunItemStack("DB_DEEPSLATE_1", Material.BLUE_DYE, "&dCompressed Deepslate", "", "&f8 Deepslate", "");
+    public static final SlimefunItemStack DB_FLINT_1 = new SlimefunItemStack("DB_FLINT_1", Material.BROWN_DYE, "&dCompressed Flint", "", "&f8 Flint", "");
+    public static final SlimefunItemStack DB_GRAVEL_1 = new SlimefunItemStack("DB_GRAVEL_1", Material.GREEN_DYE, "&dCompressed Gravel", "", "&f8 Gravel", "");
+    public static final SlimefunItemStack DB_DIRT_1 = new SlimefunItemStack("DB_DIRT_1", Material.RED_DYE, "&dCompressed Dirt", "", "&f8 Dirt", "");
+    public static final SlimefunItemStack DB_CLAY_1 = new SlimefunItemStack("DB_CLAY_1", Material.BLACK_DYE, "&dCompressed Clay", "", "&f8 Clay", "");
     
     //addon info
     public static final SlimefunItemStack DB_MC_VERSION = new SlimefunItemStack("DB_MC_VERSION", Material.BOOK, "&fMinecraft Version", "", "&fWorks on versions 1.17x-1.19x");
