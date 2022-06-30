@@ -31,11 +31,10 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
     @Override
     protected void registerDefaultRecipes() {
 
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.WATER_BUCKET)},
-                new ItemStack[] {new ItemStack(Material.BUCKET), new CustomItemStack(SlimefunItems.SALT, 4)});
+
         registerRecipe(8, new ItemStack[] {new ItemStack(Material.LAVA_BUCKET)}, new ItemStack[] {new ItemStack(Material.BUCKET),
                         new CustomItemStack(SlimefunItems.SULFATE, 16)});
-        registerRecipe(3, new ItemStack[] {new ItemStack(Material.MAGMA_BLOCK)}, new ItemStack[] {SlimefunItems.SULFATE});
+        
 
     }
 
@@ -53,17 +52,17 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
 
     @Override
     public ItemStack getProgressBar() {
-        return new ItemStack(Material.IRON_HOE);
+        return new ItemStack(Material.LOOM);
     }
 
     @Override
     public String getInventoryTitle() {
-        return "&cVaporizer";
+        return "&fDyeBEnch";
     }
 
     @Override
     public String getMachineIdentifier() {
-        return "VAPORIZER";
+        return "DYEBENCH";
     }
 
     @Override
