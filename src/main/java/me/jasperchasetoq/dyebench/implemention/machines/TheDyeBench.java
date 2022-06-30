@@ -3,11 +3,9 @@ package me.jasperchasetoq.dyebench.implemention.machines;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import me.jasperchasetoq.dyebench.DyebenchItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
@@ -15,10 +13,9 @@ import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class TheDyeBench extends AContainer implements RecipeDisplayItem {
+public class TheDyeBench extends AContainer {
 
 
     public TheDyeBench(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -36,17 +33,7 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
 
     }
 
-    @Override
-    public List<ItemStack> getDisplayRecipes() {
-        List<ItemStack> displayRecipes = new ArrayList<>(recipes.size() * 2);
 
-        for (MachineRecipe recipe : recipes) {
-            displayRecipes.add(recipe.getInput()[0]);
-            displayRecipes.add(recipe.getOutput()[recipe.getOutput().length - 1]);
-        }
-
-        return displayRecipes;
-    }
 
     @Override
     public ItemStack getProgressBar() {

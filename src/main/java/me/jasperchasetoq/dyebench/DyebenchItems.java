@@ -16,8 +16,9 @@ public class DyebenchItems {
 
     //groups
     public static final NestedItemGroup DB_GENERAL = new NestedItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_GENERAL"), new CustomItemStack(Material.LOOM, "&bDyeBench"));
-    public static final SubItemGroup DB_MACHINES = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_MACHINES"), DB_GENERAL, new CustomItemStack(Material.LOOM, "&bCompressed Items"));
-    public static final SubItemGroup DB_PIGMENTS = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_PIGMENTS"), DB_GENERAL, new CustomItemStack(Material.WHITE_DYE, "&bCompressors & Decompressors"));
+    public static final SubItemGroup DB_MACHINES = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_MACHINES"), DB_GENERAL, new CustomItemStack(Material.LOOM, "&bMachines"));
+    public static final SubItemGroup DB_PIGMENTS = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_PIGMENTS"), DB_GENERAL, new CustomItemStack(Material.WHITE_DYE, "&bPigments"));
+    public static final SubItemGroup DB_DYEABLE_BLOCKS = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_DYEABLE_BLOCKS"), DB_GENERAL, new CustomItemStack(Material.WHITE_WOOL, "&bDyeable Blocks"));
     public static final SubItemGroup DB_INFO = new SubItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_INFO"), DB_GENERAL, new CustomItemStack(Material.BOOK, "&bAddon Info"));
 
     public static final ItemGroup DyeBenchGeneral = new ItemGroup(new NamespacedKey(DyeBench.getInstance(), "DyeBench"),
@@ -42,7 +43,24 @@ public class DyebenchItems {
     public static final SlimefunItemStack DB_GREEN_PIGMENT = new SlimefunItemStack("DB_GREEN_PIGMENT", Material.GREEN_DYE, "&dGreen Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_RED_PIGMENT = new SlimefunItemStack("DB_RED_PIGMENT", Material.RED_DYE, "&dRed Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_BLACK_PIGMENT = new SlimefunItemStack("DB_BLACK_PIGMENT", Material.BLACK_DYE, "&dBlack Pigment", "", "&fA reusable Pigment", "");
-    
+    //Dyeable Blocks
+    public static final SlimefunItemStack DB_DYEABLE_WOOL = new SlimefunItemStack("DB_DYEABLE_WOOL", Material.WHITE_WOOL, "&dfWool",
+            "&fYou can dye wool in the following colors",
+            "&fOrange",
+            "&fMagenta",
+            "Light Blue",
+            "Yellow",
+            "Lime",
+            "Pink",
+            "Gray",
+            "Light Gray",
+            "Cyan",
+            "Purple",
+            "Blue",
+            "Brown",
+            "Green",
+            "Red",
+            "Black");
     //addon info
     public static final SlimefunItemStack DB_MC_VERSION = new SlimefunItemStack("DB_MC_VERSION", Material.BOOK, "&fMinecraft Version", "", "&fWorks on versions 1.17x-1.19x");
     public static final SlimefunItemStack DB_SF_BUILD = new SlimefunItemStack("DB_SF_BUILD", Material.BOOK, "&fSlimefun Build", "", "&fDyeBench was built on slimefun version: RC-31");
