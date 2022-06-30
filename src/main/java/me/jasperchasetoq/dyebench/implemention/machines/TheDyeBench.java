@@ -5,8 +5,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.jasperchasetoq.dyebench.DyebenchItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
@@ -32,8 +30,8 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
     protected void registerDefaultRecipes() {
 
 
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.LAVA_BUCKET)}, new ItemStack[] {new ItemStack(Material.BUCKET),
-                        new CustomItemStack(SlimefunItems.SULFATE, 16)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.WHITE_WOOL), new SlimefunItemStack(DyebenchItems.DB_ORANGE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.ORANGE_WOOL), new SlimefunItemStack(DyebenchItems.DB_ORANGE_PIGMENT, 1)});
         
 
     }
