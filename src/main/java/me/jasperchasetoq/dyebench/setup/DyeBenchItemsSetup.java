@@ -5,6 +5,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.jasperchasetoq.dyebench.DyeBench;
 import me.jasperchasetoq.dyebench.DyebenchItems;
 import me.jasperchasetoq.dyebench.implemention.machines.TheDyeBench;
+import me.jasperchasetoq.dyebench.implemention.machines.items.Pigments;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -23,6 +24,12 @@ import javax.annotation.Nonnull;
                             new ItemStack(Material.WHITE_WOOL, 1), new ItemStack(Material.WHITE_TERRACOTTA, 1), new ItemStack(Material.WHITE_BANNER, 1),
                             new ItemStack(Material.WHITE_BED, 1), new ItemStack(Material.LOOM, 1), new ItemStack(Material.WHITE_CANDLE, 1),
                             new ItemStack(Material.WHITE_SHULKER_BOX, 1), new ItemStack(Material.WHITE_CONCRETE, 1), new ItemStack(Material.WHITE_STAINED_GLASS, 1),
+                    }).register(plugin);
+            new Pigments(DyebenchItems.DB_PIGMENTS, DyebenchItems.DB_WHITE_PIGMENT, RecipeType.ENHANCED_CRAFTING_TABLE,
+                    new ItemStack[]{
+                            new ItemStack(Material.WHITE_DYE, 64), new ItemStack(Material.WHITE_DYE, 64), new ItemStack(Material.WHITE_DYE, 64),
+                            new ItemStack(Material.WHITE_DYE, 64), new ItemStack(Material.LOOM, 1), new ItemStack(Material.WHITE_DYE, 64),
+                            new ItemStack(Material.WHITE_DYE, 64), new ItemStack(Material.WHITE_DYE, 64), new ItemStack(Material.WHITE_DYE, 64),
                     }).register(plugin);
             //pigments
 

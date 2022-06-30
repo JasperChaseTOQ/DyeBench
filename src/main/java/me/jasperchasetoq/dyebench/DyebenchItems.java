@@ -27,7 +27,7 @@ public class DyebenchItems {
     //machines
     public static final SlimefunItemStack DB_DYEBENCH = new SlimefunItemStack("DB_DYEBENCH", Material.LOOM, "&eDye Bench", "&fDyes items using pigments", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), LoreBuilder.speed(1), LoreBuilder.powerPerSecond(50));
     //Pigments
-    public static final SlimefunItemStack DB_WHITE_PIGMENT = new SlimefunItemStack("DB_WHITE_PIGMENT", Material.WHITE_DYE, "&fBlack Pigment", "", "&fA reusable Pigment", "");
+    public static final SlimefunItemStack DB_WHITE_PIGMENT = new SlimefunItemStack("DB_WHITE_PIGMENT", Material.WHITE_DYE, "&fWhite Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_ORANGE_PIGMENT = new SlimefunItemStack("DB_ORANGE_PIGMENT", Material.ORANGE_DYE, "&dOrange Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_MAGENTA_PIGMENT = new SlimefunItemStack("DB_MAGENTA_PIGMENT", Material.MAGENTA_DYE, "&dMagenta Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_LIGHT_BLUE_PIGMENT = new SlimefunItemStack("DB_LIGHT_BLUE_PIGMENT", Material.LIGHT_BLUE_DYE, "&dLight Blue Pigment", "", "&fA reusable Pigment", "");
@@ -46,21 +46,21 @@ public class DyebenchItems {
     //Dyeable Blocks
     public static final SlimefunItemStack DB_DYEABLE_WOOL = new SlimefunItemStack("DB_DYEABLE_WOOL", Material.WHITE_WOOL, "&dfWool",
             "&fYou can dye wool in the following colors",
-            "&fOrange",
-            "&fMagenta",
-            "Light Blue",
-            "Yellow",
-            "Lime",
-            "Pink",
-            "Gray",
-            "Light Gray",
-            "Cyan",
-            "Purple",
-            "Blue",
-            "Brown",
-            "Green",
-            "Red",
-            "Black");
+            "&6Orange",
+            "&dMagenta",
+            "&bLight Blue",
+            "&eYellow",
+            "&aLime",
+            "&dPink",
+            "&8Gray",
+            "&7Light Gray",
+            "&3Cyan",
+            "&5Purple",
+            "&9Blue",
+            "&6Brown",
+            "&2Green",
+            "&4Red",
+            "&0Black");
     //addon info
     public static final SlimefunItemStack DB_MC_VERSION = new SlimefunItemStack("DB_MC_VERSION", Material.BOOK, "&fMinecraft Version", "", "&fWorks on versions 1.17x-1.19x");
     public static final SlimefunItemStack DB_SF_BUILD = new SlimefunItemStack("DB_SF_BUILD", Material.BOOK, "&fSlimefun Build", "", "&fDyeBench was built on slimefun version: RC-31");
