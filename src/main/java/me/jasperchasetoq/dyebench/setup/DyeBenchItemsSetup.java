@@ -124,7 +124,11 @@ import javax.annotation.Nonnull;
                     }).register(plugin);
             //Dyeable Blocks
             new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_WOOL, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEABLE_WOOL, null, null, null, null,}).register(plugin);
+                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
+            new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_CARPET, RecipeType.NULL,
+                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
+            new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_CANDLES, RecipeType.NULL,
+                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
             //info
             new SlimefunItem(DyebenchItems.DB_INFO, DyebenchItems.DB_MC_VERSION, RecipeType.NULL,
                     new ItemStack[]{null, null, null, null, null, null, null, null, null,}).register(plugin);
