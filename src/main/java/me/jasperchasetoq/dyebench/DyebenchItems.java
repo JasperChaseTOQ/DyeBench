@@ -167,6 +167,24 @@ public class DyebenchItems {
             "&2Green",
             "&4Red",
             "&0Black");
+    public static final SlimefunItemStack DB_DYEABLE_SHULKER_BOXES = new SlimefunItemStack("DB_DYEABLE_SHULKER_BOXES", Material.SHULKER_BOX, "&fShulker Box",
+            "&f you can dye Shulker boxes in the following colors",
+            "&fWhite",
+            "&6Orange",
+            "&dMagenta",
+            "&bLight Blue",
+            "&eYellow",
+            "&aLime",
+            "&dPink",
+            "&8Gray",
+            "&7Light Gray",
+            "&3Cyan",
+            "&5Purple",
+            "&9Blue",
+            "&6Brown",
+            "&2Green",
+            "&4Red",
+            "&0Black");
     //addon info
     public static final SlimefunItemStack DB_MC_VERSION = new SlimefunItemStack("DB_MC_VERSION", Material.BOOK, "&fMinecraft Version", "", "&fWorks on versions 1.17x-1.19x");
     public static final SlimefunItemStack DB_SF_BUILD = new SlimefunItemStack("DB_SF_BUILD", Material.BOOK, "&fSlimefun Build", "", "&fDyeBench was built on slimefun version: RC-31");
