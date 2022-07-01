@@ -48,7 +48,7 @@ public class TheDyeBench extends AContainer {
 
     @Override
     public String getInventoryTitle() {
-        return "&fDyeBEnch";
+        return "&fDyeBench";
     }
 
     @Override
@@ -58,12 +58,12 @@ public class TheDyeBench extends AContainer {
 
     @Override
     public int getCapacity() {
-        return 256;
+        return 250;
     }
 
     @Override
     public int getEnergyConsumption() {
-        return 16;
+        return 25;
     }
 
     @Override

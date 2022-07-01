@@ -44,8 +44,26 @@ public class DyebenchItems {
     public static final SlimefunItemStack DB_RED_PIGMENT = new SlimefunItemStack("DB_RED_PIGMENT", Material.RED_DYE, "&dRed Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack DB_BLACK_PIGMENT = new SlimefunItemStack("DB_BLACK_PIGMENT", Material.BLACK_DYE, "&dBlack Pigment", "", "&fA reusable Pigment", "");
     //Dyeable Blocks
-    public static final SlimefunItemStack DB_DYEABLE_WOOL = new SlimefunItemStack("DB_DYEABLE_WOOL", Material.WHITE_WOOL, "&dfWool",
-            "&fYou can dye wool in the following colors",
+    public static final SlimefunItemStack DB_DYEABLE_WOOL = new SlimefunItemStack("DB_DYEABLE_WOOL", Material.WHITE_WOOL, "&fWool",
+            "&f you can dye wool in the following colors",
+            "&6Orange",
+            "&dMagenta",
+            "&bLight Blue",
+            "&eYellow",
+            "&aLime",
+            "&dPink",
+            "&8Gray",
+            "&7Light Gray",
+            "&3Cyan",
+            "&5Purple",
+            "&9Blue",
+            "&6Brown",
+            "&2Green",
+            "&4Red",
+            "&0Black");
+    public static final SlimefunItemStack DB_DYEABLE_CANDLES = new SlimefunItemStack("DB_DYEABLE_CANDLES", Material.WHITE_WOOL, "&fCandles",
+            "&f you can dye wool in the following colors",
+            "&fWhite",
             "&6Orange",
             "&dMagenta",
             "&bLight Blue",
