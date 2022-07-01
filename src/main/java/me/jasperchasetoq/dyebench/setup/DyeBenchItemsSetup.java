@@ -125,6 +125,10 @@ import javax.annotation.Nonnull;
             //Dyeable Blocks
             new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_WOOL, RecipeType.NULL,
                     new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
+            new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_GLASS, RecipeType.NULL,
+                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
+            new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_GLASS_PANES, RecipeType.NULL,
+                    new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
             new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_CARPET, RecipeType.NULL,
                     new ItemStack[]{null, null, null, null, DyebenchItems.DB_DYEBENCH, null, null, null, null,}).register(plugin);
             new SlimefunItem(DyebenchItems.DB_DYEABLE_BLOCKS, DyebenchItems.DB_DYEABLE_CANDLES, RecipeType.NULL,
