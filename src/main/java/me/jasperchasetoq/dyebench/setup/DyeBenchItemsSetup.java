@@ -5,7 +5,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import me.jasperchasetoq.dyebench.DyeBench;
 import me.jasperchasetoq.dyebench.DyebenchItems;
 import me.jasperchasetoq.dyebench.implemention.machines.TheDyeBench;
-import me.jasperchasetoq.dyebench.implemention.machines.items.Pigments;
+import me.jasperchasetoq.dyebench.implemention.items.Pigments;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 

@@ -1,4 +1,4 @@
-package me.jasperchasetoq.dyebench.implemention.machines.items;
+package me.jasperchasetoq.dyebench.implemention.items;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
