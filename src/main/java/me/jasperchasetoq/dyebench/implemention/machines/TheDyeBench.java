@@ -4,7 +4,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import me.jasperchasetoq.dyebench.DyebenchItems;
+import me.jasperchasetoq.dyebench.DyeBenchItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -27,16 +27,16 @@ public class TheDyeBench extends AContainer {
     protected void registerDefaultRecipes() {
 
 
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)},
-                new ItemStack[] {new ItemStack(Material.WHITE_CANDLE), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)});
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.TERRACOTTA), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)},
-                new ItemStack[] {new ItemStack(Material.WHITE_TERRACOTTA), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)});
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.GLASS), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)},
-                new ItemStack[] {new ItemStack(Material.WHITE_STAINED_GLASS), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)});
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.GLASS_PANE), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)},
-                new ItemStack[] {new ItemStack(Material.WHITE_STAINED_GLASS_PANE), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)});
-        registerRecipe(8, new ItemStack[] {new ItemStack(Material.SHULKER_BOX), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)},
-                new ItemStack[] {new ItemStack(Material.WHITE_SHULKER_BOX), new SlimefunItemStack(DyebenchItems.DB_WHITE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.WHITE_CANDLE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.TERRACOTTA), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.WHITE_TERRACOTTA), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.GLASS), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.WHITE_STAINED_GLASS), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.GLASS_PANE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.WHITE_STAINED_GLASS_PANE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.SHULKER_BOX), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.WHITE_SHULKER_BOX), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
     }
 
 

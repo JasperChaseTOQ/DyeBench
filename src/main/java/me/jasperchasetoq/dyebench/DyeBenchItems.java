@@ -11,8 +11,8 @@ import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 
-public class DyebenchItems {
-    private DyebenchItems() {}
+public class DyeBenchItems {
+    private DyeBenchItems() {}
 
     //groups
     public static final NestedItemGroup DB_GENERAL = new NestedItemGroup(new NamespacedKey(DyeBench.getInstance(), "DB_GENERAL"), new CustomItemStack(Material.LOOM, "&bDyeBench"));
@@ -238,6 +238,11 @@ public class DyebenchItems {
             "&0Black");
     //addon info
     public static final SlimefunItemStack DB_MC_VERSION = new SlimefunItemStack("DB_MC_VERSION", Material.BOOK, "&fMinecraft Version", "", "&fWorks on versions 1.17x-1.19x");
-    public static final SlimefunItemStack DB_SF_BUILD = new SlimefunItemStack("DB_SF_BUILD", Material.BOOK, "&fSlimefun Build", "", "&fDyeBench was built on slimefun version: RC-31");
+    public static final SlimefunItemStack DB_JAVA_VERSION = new SlimefunItemStack("DB_JAVA_VERSION", Material.BOOK, "&fJava Version", "", "&fDyebench requires Java 16+ to work");
+    public static final SlimefunItemStack DB_SF_BUILD = new SlimefunItemStack("DB_SF_BUILD", Material.BOOK, "&fSlimefun Build", "", "&fDyebench was built on slimefun version: RC-32");
+    public static final SlimefunItemStack DB_VERSION = new SlimefunItemStack("DB_VERSION", Material.BOOK, "&fDyeBench Verison",  "&fDyebench Info",
+            "",
+            "&f" + DyeBench.getInstance().getName() + " " + DyeBench.getInstance().getPluginVersion());
+    //Credit and the source for the DB_VERSION goes to https://github.com/Sfiguz7/TranscEndence/blob/master/src/main/java/me/sfiguz7/transcendence/lists/TEItems.java
 }
 
