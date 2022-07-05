@@ -26,6 +26,7 @@ public class TheDyeBench extends AContainer {
     @Override
     protected void registerDefaultRecipes() {
 
+        //white
 
         registerRecipe(8, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
                 new ItemStack[] {new ItemStack(Material.WHITE_CANDLE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
@@ -37,6 +38,13 @@ public class TheDyeBench extends AContainer {
                 new ItemStack[] {new ItemStack(Material.WHITE_STAINED_GLASS_PANE), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
         registerRecipe(8, new ItemStack[] {new ItemStack(Material.SHULKER_BOX), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)},
                 new ItemStack[] {new ItemStack(Material.WHITE_SHULKER_BOX), new SlimefunItemStack(DyeBenchItems.DB_WHITE_PIGMENT, 1)});
+
+        //orange
+
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.WHITE_WOOL), new SlimefunItemStack(DyeBenchItems.DB_ORANGE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.ORANGE_WOOL), new SlimefunItemStack(DyeBenchItems.DB_ORANGE_PIGMENT, 1)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.WHITE_CARPET), new SlimefunItemStack(DyeBenchItems.DB_ORANGE_PIGMENT, 1)},
+                new ItemStack[] {new ItemStack(Material.ORANGE_CARPET), new SlimefunItemStack(DyeBenchItems.DB_ORANGE_PIGMENT, 1)});
     }
 
 
