@@ -21,9 +21,9 @@ import javax.annotation.Nonnull;
             //machines
             new TheDyeBench(DyebenchItems.DB_MACHINES, DyebenchItems.DB_DYEBENCH, RecipeType.ENHANCED_CRAFTING_TABLE,
                     new ItemStack[]{
-                            new ItemStack(Material.WHITE_WOOL, 1), new ItemStack(Material.WHITE_TERRACOTTA, 1), new ItemStack(Material.WHITE_BANNER, 1),
-                            new ItemStack(Material.WHITE_BED, 1), new ItemStack(Material.LOOM, 1), new ItemStack(Material.WHITE_CANDLE, 1),
-                            new ItemStack(Material.WHITE_SHULKER_BOX, 1), new ItemStack(Material.WHITE_CONCRETE, 1), new ItemStack(Material.WHITE_STAINED_GLASS, 1),
+                            new ItemStack(Material.WHITE_WOOL, 1), new ItemStack(Material.TERRACOTTA, 1), new ItemStack(Material.WHITE_CARPET, 1),
+                            new ItemStack(Material.WHITE_BED, 1), new ItemStack(Material.LOOM, 1), new ItemStack(Material.CANDLE, 1),
+                            new ItemStack(Material.SHULKER_BOX, 1), new ItemStack(Material.WHITE_CONCRETE, 1), new ItemStack(Material.GLASS, 1),
                     }).register(plugin);
             //pigments
             new Pigments(DyebenchItems.DB_PIGMENTS, DyebenchItems.DB_WHITE_PIGMENT, RecipeType.ENHANCED_CRAFTING_TABLE,

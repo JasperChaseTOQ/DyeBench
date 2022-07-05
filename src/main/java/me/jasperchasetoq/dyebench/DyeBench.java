@@ -1,6 +1,7 @@
 package me.jasperchasetoq.dyebench;
 
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import org.bstats.bukkit.Metrics;
 import me.jasperchasetoq.dyebench.setup.DyeBenchItemsSetup;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -33,7 +34,11 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
 
         if (getConfig().getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
             new GitHubBuildsUpdater(this, getFile(), "JasperChaseTOQ/DyeBench/master").start();
+
+            int pluginId = 15656;
+            Metrics metrics = new Metrics(this, pluginId);
         }
+
     }
 
     @Override
@@ -43,8 +48,7 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        // You can return a link to your Bug Tracker instead of null here
-        return null;
+        return "https://github.com/JasperChaseTOQ/DyeBench/issues";
     }
 
     @Nonnull
