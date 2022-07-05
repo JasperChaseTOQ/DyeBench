@@ -61,11 +61,7 @@ public class DyebenchItems {
             "&2Green",
             "&4Red",
             "&0Black");
-<<<<<<< Updated upstream:src/main/java/me/jasperchasetoq/dyebench/DyebenchItems.java
-    public static final SlimefunItemStack DB_DYEABLE_CANDLES = new SlimefunItemStack("DB_DYEABLE_CANDLES", Material.WHITE_WOOL, "&fCandles",
-            "&f you can dye wool in the following colors",
-=======
-    public static final SlimefunItemStack DB_DYEABLE_CARPET = new SlimefunItemStack("DB_DYEABLE_CARPET", Material.WHITE_CARPET, "&fCarpet",
+ static final SlimefunItemStack DB_DYEABLE_CARPET = new SlimefunItemStack("DB_DYEABLE_CARPET", Material.WHITE_CARPET, "&fCarpet",
             "&f you can dye carpet in the following colors",
             "&6Orange",
             "&dMagenta",
@@ -173,7 +169,6 @@ public class DyebenchItems {
             "&0Black");
     public static final SlimefunItemStack DB_DYEABLE_SHULKER_BOXES = new SlimefunItemStack("DB_DYEABLE_SHULKER_BOXES", Material.SHULKER_BOX, "&fShulker Box",
             "&f you can dye Shulker boxes in the following colors",
->>>>>>> Stashed changes:src/main/java/me/jasperchasetoq/dyebench/DyeBenchItems.java
             "&fWhite",
             "&6Orange",
             "&dMagenta",
