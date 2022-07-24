@@ -38,11 +38,11 @@ public class DyeBenchItems {
     public static final SlimefunItemStack JC_LIGHT_GRAY_PIGMENT = new SlimefunItemStack("JC_LIGHT_GRAY_PIGMENT", Material.LIGHT_GRAY_DYE, "&dLight Gray Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack JC_CYAN_PIGMENT = new SlimefunItemStack("JC_CYAN_PIGMENT", Material.CYAN_DYE, "&dCyan Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack JC_PURPLE_PIGMENT = new SlimefunItemStack("JC_PURPLE_PIGMENT", Material.PURPLE_DYE, "&dPurple Pigment", "", "&fA reusable Pigment", "");
-    public static final SlimefunItemStack JC_BLUE_PIGMENT = new SlimefunItemStack("JC_BLUE_PIGMENT", Material.BLUE_DYE, "&JClue Pigment", "", "&fA reusable Pigment", "");
-    public static final SlimefunItemStack JC_BROWN_PIGMENT = new SlimefunItemStack("JC_BROWN_PIGMENT", Material.BROWN_DYE, "&JCrown Pigment", "", "&fA reusable Pigment", "");
+    public static final SlimefunItemStack JC_BLUE_PIGMENT = new SlimefunItemStack("JC_BLUE_PIGMENT", Material.BLUE_DYE, "&fBlue Pigment", "", "&fA reusable Pigment", "");
+    public static final SlimefunItemStack JC_BROWN_PIGMENT = new SlimefunItemStack("JC_BROWN_PIGMENT", Material.BROWN_DYE, "&fBrown Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack JC_GREEN_PIGMENT = new SlimefunItemStack("JC_GREEN_PIGMENT", Material.GREEN_DYE, "&dGreen Pigment", "", "&fA reusable Pigment", "");
     public static final SlimefunItemStack JC_RED_PIGMENT = new SlimefunItemStack("JC_RED_PIGMENT", Material.RED_DYE, "&dRed Pigment", "", "&fA reusable Pigment", "");
-    public static final SlimefunItemStack JC_BLACK_PIGMENT = new SlimefunItemStack("JC_BLACK_PIGMENT", Material.BLACK_DYE, "&JClack Pigment", "", "&fA reusable Pigment", "");
+    public static final SlimefunItemStack JC_BLACK_PIGMENT = new SlimefunItemStack("JC_BLACK_PIGMENT", Material.BLACK_DYE, "&fBlack Pigment", "", "&fA reusable Pigment", "");
     //Dyeable Blocks
     public static final SlimefunItemStack JC_DYEABLE_WOOL = new SlimefunItemStack("JC_DYEABLE_WOOL", Material.WHITE_WOOL, "&fWool",
             "&f you can dye wool in the following colors",
