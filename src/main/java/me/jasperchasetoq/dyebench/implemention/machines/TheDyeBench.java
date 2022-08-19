@@ -3,9 +3,11 @@ package me.jasperchasetoq.dyebench.implemention.machines;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import me.jasperchasetoq.dyebench.DyeBenchItems;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
+import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
@@ -13,9 +15,11 @@ import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
 import java.util.List;
 
-public class TheDyeBench extends AContainer {
+public class TheDyeBench extends AContainer implements RecipeDisplayItem {
 
 
     public TheDyeBench(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -27,7 +31,6 @@ public class TheDyeBench extends AContainer {
     protected void registerDefaultRecipes() {
 
         //white
-
         registerRecipe(1, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)},
                 new ItemStack[] {new ItemStack(Material.WHITE_CANDLE), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)});
         registerRecipe(1, new ItemStack[] {new ItemStack(Material.TERRACOTTA), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)},
@@ -416,7 +419,6 @@ public class TheDyeBench extends AContainer {
     }
 
 
-
     @Override
     public ItemStack getProgressBar() {
         return new ItemStack(Material.LOOM);
@@ -424,7 +426,7 @@ public class TheDyeBench extends AContainer {
 
     @Override
     public String getInventoryTitle() {
-        return "&e Dye Bench";
+        return "&fDye Bench";
     }
 
     @Override
@@ -461,6 +463,21 @@ public class TheDyeBench extends AContainer {
                 }
             }
         };
+
+    }
+    @Nonnull
+    @Override
+    public List<ItemStack> getDisplayRecipes() {
+        List<ItemStack> displayRecipes = new ArrayList<>(recipes.size() * 2);
+
+        for (MachineRecipe recipe : recipes) {
+            displayRecipes.add(recipe.getOutput()[recipe.getOutput().length - 1]);
+            displayRecipes.add(recipe.getInput()[recipe.getInput().length - 1]);
+            displayRecipes.add(recipe.getInput()[recipe.getInput().length - 2]);
+            displayRecipes.add(recipe.getOutput()[recipe.getOutput().length - 2]);
+        }
+
+        return displayRecipes;
     }
 
 }

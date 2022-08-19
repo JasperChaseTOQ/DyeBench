@@ -1,6 +1,5 @@
 package me.jasperchasetoq.dyebench.setup;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
@@ -123,30 +122,6 @@ import javax.annotation.Nonnull;
                             new ItemStack(Material.BLACK_DYE), new ItemStack(Material.LOOM), new ItemStack(Material.BLACK_DYE),
                             new ItemStack(Material.BLACK_DYE), new ItemStack(Material.BLACK_DYE), new ItemStack(Material.BLACK_DYE),
                     }).register(plugin);
-            //Dyeable Blocks
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_WOOL, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_GLASS, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_GLASS_PANES, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_CARPET, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_CANDLES, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_TERRACOTTA, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_GLAZED_TERRACOTTA, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_SHULKER_BOXES, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_CONCRETE_POWDER, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_CONCRETE, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-            new SlimefunItem(DyeBenchItems.JC_DB_DYEABLE_BLOCKS, DyeBenchItems.JC_DYEABLE_BEDS, RecipeType.NULL,
-                    new ItemStack[]{null, null, null, null, DyeBenchItems.JC_DYEBENCH, null, null, null, null,}).register(plugin);
-
         }
     }
 
