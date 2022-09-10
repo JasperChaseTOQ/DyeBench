@@ -11,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
-    public class DyeBenchItemsSetup {
-        private DyeBenchItemsSetup() {
+    public class DyeBenchItemSetup {
+        private DyeBenchItemSetup() {
         }
 
         public static void setup(@Nonnull DyeBench plugin) {
