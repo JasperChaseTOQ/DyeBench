@@ -9,6 +9,13 @@
 
     <version>UNOFFICIAL</version>
 
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+    </properties>
+
     <repositories>
         <repository>
             <id>paper-repo</id>
@@ -114,6 +121,11 @@
             <artifactId>bstats-bukkit</artifactId>
             <version>3.0.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.JasperChaseTOQ</groupId>
+            <artifactId>WolfyLibrary</artifactId>
+            <version>v1.1.7</version>
         </dependency>
     </dependencies>
 </project>

@@ -30,6 +30,8 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
     @Override
     protected void registerDefaultRecipes() {
 
+
+
         //white
         registerRecipe(1, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)},
                 new ItemStack[] {new ItemStack(Material.WHITE_CANDLE), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)});

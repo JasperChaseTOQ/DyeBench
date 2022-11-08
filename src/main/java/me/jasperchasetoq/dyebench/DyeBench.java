@@ -29,13 +29,12 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
         if (getConfig().getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
             new GitHubBuildsUpdater(this, getFile(), "JasperChaseTOQ/DyeBench/master").start();
 
-            int pluginId = 15656; // <-- Replace with the id of your plugin!
+            int pluginId = 15656;
             Metrics metrics = new Metrics(this, pluginId);
         }
     }
     @Override
     public void onDisable() {
-        // Logic for disabling the plugin...
     }
     @Override
     public String getBugTrackerURL() {
@@ -56,8 +55,5 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
 
     public static DyeBench getInstance() {
         return instance;
-    }
-    public static String getVersion() {
-        return instance.getDescription().getVersion();
     }
 }
