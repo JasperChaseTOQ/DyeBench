@@ -4,7 +4,7 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 
-import me.jasperchasetoq.dyebench.setup.DyeBenchItemsSetup;
+import me.jasperchasetoq.dyebench.setup.DyeBenchItemSetup;
 
 import org.bstats.bukkit.Metrics;
 
@@ -21,7 +21,7 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
 
         Config cfg = new Config(this);
 
-        DyeBenchItemsSetup.setup(this);
+        DyeBenchItemSetup.setup(this);
         if (!new File(getDataFolder(), "config.yml").exists()) {
             saveDefaultConfig();
         }
@@ -29,13 +29,12 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
         if (getConfig().getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
             new GitHubBuildsUpdater(this, getFile(), "JasperChaseTOQ/DyeBench/master").start();
 
-            int pluginId = 15656; // <-- Replace with the id of your plugin!
+            int pluginId = 15656;
             Metrics metrics = new Metrics(this, pluginId);
         }
     }
     @Override
     public void onDisable() {
-        // Logic for disabling the plugin...
     }
     @Override
     public String getBugTrackerURL() {
@@ -56,8 +55,5 @@ public class DyeBench extends JavaPlugin implements SlimefunAddon {
 
     public static DyeBench getInstance() {
         return instance;
-    }
-    public static String getVersion() {
-        return instance.getDescription().getVersion();
     }
 }

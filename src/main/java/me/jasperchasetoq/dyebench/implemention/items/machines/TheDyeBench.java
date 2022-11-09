@@ -1,34 +1,97 @@
-package me.jasperchasetoq.dyebench.implemention.machines;
+package me.jasperchasetoq.dyebench.implemention.items.machines;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.jasperchasetoq.dyebench.DyeBenchItems;
+import me.jasperchasetoq.dyebench.implemention.items.pigments.DyePigments;
+import me.jasperchasetoq.wolfylibrary.slimefun.items.electic.machines.MenuUtils;
+import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
+import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.AContainer;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
+import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
+import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class TheDyeBench extends AContainer implements RecipeDisplayItem {
+
+    //Inventory Menu Slots
+    private static final int[] FIRST_INPUT_BORDER = {0, 1, 2, 9, 11, 18, 19, 20};
+    private static final int[] SECOND_INPUT_BORDER = {7, 16, 17};
+    private static final int[] FIRST_OUTPUT_BORDER = {27, 28, 29, 36, 38, 45, 46, 47};
+    private static final int[] SECOND_OUTPUT_BORDER = {43, 44, 52};
+    private static final int[] BACKGROUND = {3, 4, 5, 6, 12, 13, 14, 15, 20, 21, 22, 23, 24, 25, 26, 30, 31, 32, 33, 34, 35, 39, 40, 41, 42, 47, 48, 49, 50, 51};
 
 
     public TheDyeBench(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(category, item, recipeType, recipe);
         addItemHandler(onBreak());
-    }
 
+        new BlockMenuPreset(getId(), "&fDye Bench") {
+            @Override
+            public void init() {
+                constructMenu(this);
+            }
+
+            @Override
+            public boolean canOpen(Block b, Player p) {
+                return p.hasPermission("slimefun.dyebench.inventory.bypass") || Slimefun.getProtectionManager().hasPermission(p, b.getLocation(), Interaction.INTERACT_BLOCK);
+            }
+
+
+            @Override
+            public int[] getSlotsAccessedByItemTransport(ItemTransportFlow flow) {
+                if (flow == ItemTransportFlow.INSERT) {
+                    return getInputSlots();
+                } else {
+                    return getOutputSlots();
+                }
+            }
+
+            @Override
+            public int[] getSlotsAccessedByItemTransport(DirtyChestMenu menu, ItemTransportFlow flow, ItemStack item) {
+                if (flow == ItemTransportFlow.INSERT) {
+                    if (SlimefunItem.getByItem(item) instanceof DyePigments) {
+                        return getSecondInputSlot();
+                    } else {
+                        return getFirstInputSlot();
+                    }
+                } else if (flow == ItemTransportFlow.WITHDRAW) {
+                    if (SlimefunItem.getByItem(item) instanceof DyePigments) {
+                        return getSecondOutputSlot();
+                    } else {
+                        return getFirstOutputSlot();
+                    }
+                } else {
+                    return getOutputSlots();
+                }
+            }
+        };
+    }
     @Override
     protected void registerDefaultRecipes() {
+
+
 
         //white
         registerRecipe(1, new ItemStack[] {new ItemStack(Material.CANDLE), new SlimefunItemStack(DyeBenchItems.JC_WHITE_PIGMENT, 1)},
@@ -425,11 +488,6 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
     }
 
     @Override
-    public String getInventoryTitle() {
-        return "&fDye Bench";
-    }
-
-    @Override
     public String getMachineIdentifier() {
         return "DYEBENCH";
     }
@@ -449,22 +507,6 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
         return 1;
     }
 
-    public BlockBreakHandler onBreak() {
-        return new BlockBreakHandler(false, false) {
-
-            @Override
-            public void onPlayerBreak(BlockBreakEvent e, ItemStack item, List<ItemStack> drops) {
-                Block b = e.getBlock();
-                BlockMenu inv = BlockStorage.getInventory(b);
-
-                if (inv != null) {
-                    inv.dropItems(b.getLocation(), getInputSlots());
-                    inv.dropItems(b.getLocation(), getOutputSlots());
-                }
-            }
-        };
-
-    }
     @Nonnull
     @Override
     public List<ItemStack> getDisplayRecipes() {
@@ -480,4 +522,81 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
         return displayRecipes;
     }
 
+    //Item Input and Output slots(
+    public int[] getFirstInputSlot() {
+        return new int[] {10};
+    }
+    public int[] getSecondInputSlot() {
+        return new int[] {8};
+    }
+    public int[] getFirstOutputSlot() {
+        return new int[] {37};
+    }
+    public int[] getSecondOutputSlot() {
+        return new int[] {53};
+    }
+    public int[] getInputSlots() {
+        return new int[] {8, 10};
+    }
+    public int[] getOutputSlots() {
+        return new int[] {37, 53};
+    }
+
+    protected void constructMenu(@Nonnull BlockMenuPreset preset) {
+        for (int i : BACKGROUND) {
+            preset.addItem(i, MenuUtils.getWolfyMachineMenuBackgroundTile(), ChestMenuUtils.getEmptyClickHandler());
+        }
+
+        for (int i : FIRST_INPUT_BORDER) {
+            preset.addItem(i, MenuUtils.getWolfyMachineMenuInputOneTile(), ChestMenuUtils.getEmptyClickHandler());
+        }
+
+        for (int i : SECOND_INPUT_BORDER) {
+            preset.addItem(i, MenuUtils.getWolfyMachineMenuInputTwoTile(), ChestMenuUtils.getEmptyClickHandler());
+        }
+
+
+        for (int i : FIRST_OUTPUT_BORDER) {
+            preset.addItem(i, MenuUtils.getWolfyMachineMenuOutputOneTile(), ChestMenuUtils.getEmptyClickHandler());
+        }
+
+        for (int i : SECOND_OUTPUT_BORDER) {
+            preset.addItem(i, MenuUtils.getWolfyMachineMenuOutputTwoTile(), ChestMenuUtils.getEmptyClickHandler());
+        }
+
+        for (int i : getOutputSlots()) {
+
+            preset.addMenuClickHandler(i, new ChestMenu.AdvancedMenuClickHandler() {
+
+                @Override
+                public boolean onClick(Player p, int slot, ItemStack cursor, ClickAction action) {
+                    return false;
+                }
+
+                @Override
+                public boolean onClick(InventoryClickEvent e, Player p, int slot, ItemStack cursor, ClickAction action) {
+                    return cursor == null || cursor.getType() == Material.AIR;
+                }
+            });
+
+        }
+    }
+
+    public BlockBreakHandler onBreak() {
+        return new BlockBreakHandler(false, false) {
+
+            @Override
+            public void onPlayerBreak(BlockBreakEvent blockbreak, ItemStack item, List<ItemStack> drops) {
+                Block machineblock = blockbreak.getBlock();
+                BlockMenu inv = BlockStorage.getInventory(machineblock);
+
+                if (inv != null) {
+                    inv.dropItems(machineblock.getLocation(), getFirstInputSlot());
+                    inv.dropItems(machineblock.getLocation(), getSecondInputSlot());
+                    inv.dropItems(machineblock.getLocation(), getFirstOutputSlot());
+                    inv.dropItems(machineblock.getLocation(), getSecondOutputSlot());
+                }
+            }
+        };
+    }
 }

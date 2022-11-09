@@ -9,17 +9,11 @@
 
     <version>UNOFFICIAL</version>
 
-    <properties>
-        <!-- UTF-8 is our standard encoding for source files -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- Target Java 16 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
-
-        <!-- Spigot properties -->
-        <spigot.version>1.19</spigot.version>
-        <spigot.javadocs>https://hub.spigotmc.org/javadocs/spigot/</spigot.javadocs>
     </properties>
 
     <repositories>
@@ -127,6 +121,11 @@
             <artifactId>bstats-bukkit</artifactId>
             <version>3.0.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.JasperChaseTOQ</groupId>
+            <artifactId>WolfyLibrary</artifactId>
+            <version>v1.1.7</version>
         </dependency>
     </dependencies>
 </project>
