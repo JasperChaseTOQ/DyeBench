@@ -76,12 +76,6 @@ public class TheDyeBench extends AContainer implements RecipeDisplayItem {
                     } else {
                         return getFirstInputSlot();
                     }
-                } else if (flow == ItemTransportFlow.WITHDRAW) {
-                    if (SlimefunItem.getByItem(item) instanceof DyePigments) {
-                        return getSecondOutputSlot();
-                    } else {
-                        return getFirstOutputSlot();
-                    }
                 } else {
                     return getOutputSlots();
                 }
